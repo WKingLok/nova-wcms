@@ -5,7 +5,12 @@ on:
       - main
 jobs:
   Test:
-    runs-on: "ubuntu-24.04-arm64"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-22.04-arm
+            arch: arm64
     steps: 
         # Environment Setup
         - name: Set up Docker Buildx
