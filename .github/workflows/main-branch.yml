@@ -53,7 +53,7 @@ jobs:
         - name: Composer Actions
           run: |
             if [[ ! -z "${{ secrets.COMPOSER_AUTH_NOVA_USERNAME }}" ]] && [[ ! -z "${{secrets.COMPOSER_AUTH_NOVA_PASSWORD}}" ]]; then
-              composer config http-basic.nova.laravel.com "$COMPOSER_AUTH_NOVA_USERNAME" "$COMPOSER_AUTH_NOVA_PASSWORD"
+              composer config http-basic.nova.laravel.com "${{secrets.COMPOSER_AUTH_NOVA_USERNAME}}" "${{secrets.COMPOSER_AUTH_NOVA_PASSWORD}}"
             fi
             composer install
         
