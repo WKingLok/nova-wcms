@@ -1,0 +1,38 @@
+{
+    "name": "packages/nova-media-image",
+    "description": "A Laravel Nova field.",
+    "version": "0.0.1",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "spatie/laravel-medialibrary": "^11.9",
+        "spatie/laravel-medialibrary-pro": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Packages\\MediaImage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Packages\\MediaImage\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../packages/laravel-medialibrary-pro"
+        }
+    ]
+}

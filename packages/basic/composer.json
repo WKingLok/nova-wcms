@@ -1,0 +1,31 @@
+{
+    "name": "packages/basic",
+    "description": "A CMS Basic Function",
+    "version": "0.0.1",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Packages\\Basic\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Packages\\Basic\\BasicServiceProvider",
+                "Packages\\Basic\\BasicNovaServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

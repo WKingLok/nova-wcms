@@ -1,0 +1,42 @@
+{
+    "name": "packages/page-editor",
+    "description": "Package: Page Editor",
+    "version": "v0.0.1",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "spatie/laravel-medialibrary": "^11.9",
+        "spatie/laravel-medialibrary-pro": "3.0.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Packages\\PageEditor\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Packages\\PageEditor\\PageEditorServiceProvider",
+                "Packages\\PageEditor\\PageEditorNovaServiceProvider"
+            ],
+            "aliases": {
+                "PageEditor": "Packages\\PageEditor\\Facades\\PageEditor"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "laravel-medialibrary-pro": {
+            "type": "path",
+            "url": "../laravel-medialibrary-pro"
+        }
+    }
+}

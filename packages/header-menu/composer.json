@@ -1,0 +1,39 @@
+{
+    "name": "packages/header-menu",
+    "description": "Packages CMS menu control.",
+    "version": "0.0.1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "alson",
+            "email": "alson.chi@packages.com.hk"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "bensampo/laravel-enum": "^6.11",
+        "laravel/nova": "4.33.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Packages\\HeaderMenu\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Packages\\HeaderMenu\\HeaderMenuServiceProvider",
+                "Packages\\HeaderMenu\\HeaderMenuNovaServiceProvider"
+            ],
+            "aliases": {
+                "HeaderMenu": "Packages\\HeaderMenu\\Facades\\HeaderMenu"
+            }
+        }
+    },
+    "repositories": {
+        "nova": {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    }
+}
