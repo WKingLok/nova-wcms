@@ -65,7 +65,7 @@ jobs:
           uses: docker/build-push-action@v6
           with: 
             push: false
-            file: "docker/DockerFile"
+            file: "{context}/docker/DockerFile"
             platforms: linux/arm64
             tags: |
               ${{ vars.APP_DOCKER_IMAGE_NAME }}:latest
