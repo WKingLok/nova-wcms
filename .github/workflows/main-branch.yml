@@ -49,18 +49,16 @@ jobs:
         #   name: List the state of node modules
         #   continue-on-error: true
         #   run: npm list
-
-        - name: NPM Actions
-          run: npm install && npm run build
         
         - name: Composer Actions
           run: |
             if [[ ! -z "${{ secrets.COMPOSER_AUTH_NOVA_USERNAME }}" ]] && [[ ! -z "${{secrets.COMPOSER_AUTH_NOVA_PASSWORD}}" ]]; then
               composer config http-basic.nova.laravel.com "$COMPOSER_AUTH_NOVA_USERNAME" "$COMPOSER_AUTH_NOVA_PASSWORD"
             fi
-
-        - name: Composer Install
-          run: composer install
+            composer install
+        
+        - name: NPM Actions
+          run: npm install && npm run build
         
         # App Pack
         - name: build and push
