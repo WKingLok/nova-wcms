@@ -16,8 +16,6 @@ jobs:
 
         - name: Set up Docker Buildx
           uses: docker/setup-buildx-action@v3
-          with:
-            platforms: linux/arm64
         
         - name: Setup the PHP environment
           uses: shivammathur/setup-php@v2
